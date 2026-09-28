@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Wilian Pinero Gonzalez — Résumé</title>
+    <!--
+      Source for public/resume.pdf. To regenerate the PDF, open this file in Chrome,
+      Print (Ctrl+P) → Destination "Save as PDF", Paper "Letter", Margins "Default",
+      "Background graphics" on — or see the README for the scripted version.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @page {
+        size: letter;
+        margin: 0.5in 0.6in 0.5in;
+      }
+
+      :root {
+        --ink: #14171a;
+        --body: #2d3238;
+        --muted: #5b626b;
+        --rule: #d9dde2;
+        --accent: #0b6f7c;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+        font-size: 9.6pt;
+        line-height: 1.42;
+        color: var(--body);
+        background: #fff;
+      }
+
+      .page {
+        max-width: 7.3in;
+      }
+
+      @media screen {
+        .page {
+          margin: 0 auto;
+          padding: 0.5in 0;
+        }
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* Header */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 24px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid var(--ink);
+      }
+
+      h1 {
+        font-size: 24pt;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        line-height: 1;
+        color: var(--ink);
+      }
+
+      .title {
+        margin-top: 6px;
+        font-size: 10.5pt;
+        font-weight: 500;
+        color: var(--accent);
+      }
+
+      .contact {
+        list-style: none;
+        text-align: right;
+        font-size: 8.8pt;
+        line-height: 1.55;
+        color: var(--muted);
+      }
+
+      /* Sections */
+      section {
+        margin-top: 14px;
+      }
+
+      h2 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 7px;
+        font-size: 8.6pt;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      h2::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: var(--rule);
+      }
+
+      .summary {
+        color: var(--body);
+      }
+
+      /* Skills */
+      .skills {
+        display: grid;
+        grid-template-columns: 118px 1fr;
+        row-gap: 3px;
+        column-gap: 12px;
+      }
+
+      .skills dt {
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      /* Entries */
+      .entry + .entry {
+        margin-top: 10px;
+      }
+
+      .entry-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: baseline;
+      }
+
+      .entry h3 {
+        font-size: 10.2pt;
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      .entry h3 .org {
+        font-weight: 400;
+        color: var(--muted);
+      }
+
+      .when {
+        flex-shrink: 0;
+        font-size: 8.8pt;
+        font-weight: 500;
+        color: var(--muted);
+        font-variant-numeric: tabular-nums;
+      }
+
+      .stack {
+        font-size: 8.6pt;
+        color: var(--accent);
+        font-weight: 500;
+      }
+
+      ul.bullets {
+        margin-top: 4px;
+        padding-left: 14px;
+      }
+
+      ul.bullets li {
+        margin-top: 2px;
+        padding-left: 2px;
+      }
+
+      ul.bullets li::marker {
+        color: var(--accent);
+      }
+
+      .edu .entry + .entry {
+        margin-top: 6px;
+      }
+
+      .edu p {
+        color: var(--muted);
+      }
+
+      .cols {
+        display: grid;
+        grid-template-columns: 1.25fr 1fr 0.8fr;
+        gap: 22px;
+      }
+
+      .cols ul {
+        list-style: none;
+      }
+
+      .cols li + li {
+        margin-top: 3px;
+      }
+
+      .cols .sub {
+        color: var(--muted);
+      }
+
+      .keep {
+        break-inside: avoid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div>
+          <h1>Wilian Pinero Gonzalez</h1>
+          <p class="title">Software Developer · Computer Science Student</p>
+        </div>
+        <ul class="contact">
+          <li>Miami, FL · (786) 930-2804</li>
+          <li><a href="mailto:wilianpg93@gmail.com">wilianpg93@gmail.com</a></li>
+          <li>
+            <a href="https://www.linkedin.com/in/willpinero/">linkedin.com/in/willpinero</a> ·
+            <a href="https://github.com/will931012">github.com/will931012</a>
+          </li>
+        </ul>
+      </header>
+
+      <section>
+        <h2>Summary</h2>
+        <p class="summary">
+          Computer Science student at Florida International University and freelance web developer
+          who designs, builds, and deploys full-stack applications for small businesses and
+          organizations — from bilingual marketing sites to point-of-sale and project-management
+          systems. Works across React, TypeScript, Node.js/Express, PostgreSQL, and SwiftUI, with a
+          background in IT support and retail operations that keeps the focus on what users need.
+          Bilingual in English and Spanish. Seeking software engineering, full-stack, front-end, and
+          AI/ML internship or entry-level roles.
+        </p>
+      </section>
+
+      <section>
+        <h2>Technical Skills</h2>
+        <dl class="skills">
+          <dt>Languages</dt>
+          <dd>JavaScript, TypeScript, Python, Swift, SQL, HTML5, CSS3</dd>
+          <dt>Frontend</dt>
+          <dd>React, React Router, Remix, Tailwind CSS, Vite, responsive and accessible UI design</dd>
+          <dt>Backend &amp; Data</dt>
+          <dd>Node.js, Express, REST APIs, PostgreSQL, SQLite, Prisma, JWT authentication</dd>
+          <dt>Mobile &amp; ML</dt>
+          <dd>SwiftUI, Alamofire, XGBoost, data visualization, machine learning fundamentals</dd>
+          <dt>Platforms &amp; Tools</dt>
+          <dd>Git, GitHub, Vercel, Railway, Cloudinary, Shopify (Liquid, Polaris), Linux</dd>
+          <dt>IT &amp; Systems</dt>
+          <dd>
+            Technical support, hardware and software troubleshooting, network configuration, z/OS
+            system programming
+          </dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+
+        <div class="entry">
+          <div class="entry-head">
+            <h3>React Web Developer <span class="org">· Independent Contractor / Freelance, Miami, FL</span></h3>
+            <span class="when">Present</span>
+          </div>
+          <ul class="bullets">
+            <li>
+              Design, build, and deploy responsive websites and web applications for small businesses
+              and organizations, owning each project from requirements and design through testing and
+              launch.
+            </li>
+            <li>
+              Built and launched a bilingual (English/Spanish) website for a Miami-Dade plumbing
+              company with service, service-area, and review sections, deployed on Vercel with a custom
+              domain.
+            </li>
+            <li>
+              Built a bilingual church website with sermon, event, and service-time pages,
+              language-specific routes, and per-page SEO metadata.
+            </li>
+            <li>
+              Developed ProMag, a construction project-management platform for MG3 Group with RFI and
+              submittal tracking and contractor directories, using React, TypeScript, Express, and
+              PostgreSQL.
+            </li>
+            <li>
+              Work directly with clients to turn business requirements into features, integrate
+              third-party services and APIs, and maintain live applications by debugging functional
+              and layout issues.
+            </li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <h3>IT Technician Intern <span class="org">· Miami Dade College, Miami, FL</span></h3>
+            <span class="when">Sep 2024 – Feb 2025</span>
+          </div>
+          <ul class="bullets">
+            <li>
+              Diagnosed and resolved hardware, software, and connectivity issues for students, faculty,
+              and staff, guiding users through troubleshooting.
+            </li>
+            <li>
+              Coordinated service tickets across technicians and support teams to improve response
+              times and reduce duplicate work.
+            </li>
+            <li>
+              Repaired desktop hardware and peripherals; installed, configured, and maintained software
+              and equipment.
+            </li>
+            <li>
+              Supported network connectivity and workstation configuration, and recommended hardware and
+              software upgrades.
+            </li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <h3>Store Manager / Web Developer <span class="org">· Compassion and Love, Miami, FL</span></h3>
+            <span class="when">Mar 2021 – Sep 2024</span>
+          </div>
+          <ul class="bullets">
+            <li>
+              Managed daily store operations, including inventory control, cash management, staff
+              supervision, and opening and closing procedures.
+            </li>
+            <li>
+              Developed and maintained the store’s website and managed e-commerce sales across multiple
+              online selling platforms.
+            </li>
+            <li>
+              Implemented website improvements to increase product visibility and improve the customer
+              experience.
+            </li>
+            <li>
+              Improved inventory procedures and customer service practices to support sales growth and
+              reduce product loss.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Selected Projects</h2>
+
+        <div class="entry keep">
+          <div class="entry-head">
+            <h3>Compassion &amp; Love POS System</h3>
+            <span class="stack">React · Express · SQLite/PostgreSQL · Tailwind CSS</span>
+          </div>
+          <ul class="bullets">
+            <li>
+              Multi-store point-of-sale web app with camera barcode scanning, receipts, printable
+              barcode labels, bulk CSV/Excel inventory import, and automated end-of-day register reports
+              sent by email.
+            </li>
+          </ul>
+        </div>
+
+        <div class="entry keep">
+          <div class="entry-head">
+            <h3>Multi-Location iOS POS App</h3>
+            <span class="stack">Swift · SwiftUI · Alamofire · Keychain</span>
+          </div>
+          <ul class="bullets">
+            <li>
+              Native point-of-sale app with location and PIN-based user sign-in, cart and quick-entry
+              keypad, camera barcode scanning, low-stock tracking, and receipt printing; credentials
+              stored securely in the iOS Keychain.
+            </li>
+          </ul>
+        </div>
+
+        <div class="entry keep">
+          <div class="entry-head">
+            <h3>MLB Prediction &amp; Live Analysis Platform</h3>
+            <span class="stack">React · Python · XGBoost</span>
+          </div>
+          <ul class="bullets">
+            <li>
+              Baseball analytics platform that compares team form, starting pitchers, and game factors
+              to produce calibrated win probabilities; live in-game updates and video-based
+              contact-quality analysis in development.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="edu keep">
+        <h2>Education</h2>
+
+        <div class="entry">
+          <div class="entry-head">
+            <h3>Florida International University <span class="org">· B.S. Computer Science, Miami, FL</span></h3>
+            <span class="when">Expected Summer 2027</span>
+          </div>
+          <p>Coursework: data structures, algorithms, computer architecture, software development.</p>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <h3>Miami Dade College <span class="org">· A.A. Computer Science, Miami, FL</span></h3>
+          </div>
+          <p>Programming, mathematics, computer systems, and networking foundations.</p>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <h3>University of Miami <span class="org">· Full Stack Web Development Bootcamp</span></h3>
+            <span class="when">Jan 2022</span>
+          </div>
+          <p>Six-month intensive program: front-end and back-end development, JavaScript, databases, and APIs.</p>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <h3>IBM Pre-Apprenticeship Program <span class="org">· z/OS System Programming Certificate</span></h3>
+            <span class="when">Jan 2023</span>
+          </div>
+          <p>About 500 hours of technical training in IBM mainframe technologies and z/OS system programming.</p>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <h3>Universidad Politécnica de La Habana <span class="org">· Civil Engineering Studies, Havana, Cuba</span></h3>
+            <span class="when">Through Jan 2018</span>
+          </div>
+          <p>About three years of undergraduate civil engineering coursework.</p>
+        </div>
+      </section>
+
+      <section class="keep">
+        <div class="cols">
+          <div>
+            <h2>Certifications</h2>
+            <ul>
+              <li>JavaScript Algorithms and Data Structures <span class="sub">— freeCodeCamp, Jun 2020</span></li>
+              <li>Scientific Computing with Python <span class="sub">— freeCodeCamp, Feb 2020</span></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Volunteer</h2>
+            <ul>
+              <li>Web Developer Volunteer <span class="sub">— VOUS Church</span></li>
+              <li class="sub">Supported website content, functionality, and online user experience for church projects.</li>
+            </ul>
+          </div>
+          <div>
+            <h2>Languages</h2>
+            <ul>
+              <li>Spanish <span class="sub">— Native</span></li>
+              <li>English <span class="sub">— Professional</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
