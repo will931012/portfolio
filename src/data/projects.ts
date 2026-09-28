@@ -21,21 +21,23 @@ export const projects: Project[] = [
     problem:
       'The information that matters before a game is spread across standings, pitcher logs, and team stats. This platform brings those signals into one place and turns them into a probability you can weigh against your own read of the matchup.',
     features: [
-      'XGBoost model that compares recent team form, starting pitchers, and game-level factors',
+      'Pregame ensemble model combining XGBoost, logistic regression, and Elo ratings',
       'Calibrated win probabilities, so a 60% forecast is meant to hold up as 60% over many games',
-      'Side-by-side matchup view for both teams and their starters',
-      'React interface designed for scanning a full slate of games quickly',
+      'Daily game board with a breakdown for every matchup',
+      'Separate in-game model with live probability timelines as the game state changes',
+      'Simulation pipeline: Bayesian player strengths, a base-out Markov model, and Monte Carlo simulation of the rest of the game',
+      'Out-of-sample backtesting page with Brier score and log loss on held-out games',
     ],
-    planned: [
-      'Live-game probability updates as the score and game state change',
-      'Video-based contact-quality analysis of batted balls',
-    ],
-    stack: ['React', 'Python', 'XGBoost', 'Data visualization'],
+    planned: ['Video-based contact-quality analysis of batted balls'],
+    stack: ['React', 'TypeScript', 'Express', 'Python', 'XGBoost', 'Tailwind CSS'],
     categories: ['ai', 'web'],
     platform: 'web',
     featured: true,
     links: { github: null, demo: null },
-    image: null,
+    image: {
+      src: '/projects/mlb-edge.webp',
+      alt: 'MLB Edge Predictor performance page showing the five-step prediction architecture and backtest results',
+    },
   },
   {
     slug: 'compassion-and-love-pos',
@@ -167,7 +169,10 @@ export const projects: Project[] = [
     categories: ['web', 'commerce'],
     platform: 'web',
     links: { github: null, demo: null },
-    image: null,
+    image: {
+      src: '/projects/ecommerce-inventory.webp',
+      alt: 'Project cover for the E-Commerce & Inventory Platform listing its tech stack',
+    },
   },
   {
     slug: 'multi-location-ios-pos',
@@ -189,7 +194,10 @@ export const projects: Project[] = [
     categories: ['mobile', 'commerce'],
     platform: 'mobile',
     links: { github: 'https://github.com/will931012/PineroPOSiOSApp', demo: null },
-    image: null,
+    image: {
+      src: '/projects/ios-pos.webp',
+      alt: 'Project cover for the Multi-Location iOS POS App listing its tech stack',
+    },
   },
   {
     slug: 'black-oaths',
@@ -249,21 +257,28 @@ export const projects: Project[] = [
   },
   {
     slug: 'property-inspection',
-    title: 'Property Inspection App',
-    tagline: 'A field tool for completing four-point and wind-mitigation inspections from a phone.',
+    title: 'SmartInspector — Property Inspection Suite',
+    tagline:
+      'A field-inspection platform for four-point and wind-mitigation inspections, from client intake to the final report.',
     goal: 'Make residential inspections faster to complete on site with a structured, step-by-step workflow instead of paper forms.',
     problem:
       'Four-point and wind-mitigation inspections are common requirements for Florida homeowners insurance, and they involve the same checklists on every job. A mobile-first workflow keeps the inspector moving through each section while still at the property.',
     features: [
-      'Guided four-point inspection workflow covering roof, electrical, plumbing, and HVAC',
-      'Wind-mitigation inspection workflow',
-      'Mobile-first layout designed for use in the field',
+      'New-inspection intake for client details, property information, and inspection type',
+      'Evidence checklist organized by roof, attic, electrical, plumbing, HVAC, and more',
+      'Evaluation and manual verification steps before a report is produced',
+      'Report generation and an inspection history',
+      'FastAPI backend for inspections, analysis, and reports',
     ],
-    stack: [],
-    categories: ['mobile'],
-    platform: 'mobile',
+    planned: ['Machine learning module to assist with inspection analysis'],
+    stack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'FastAPI', 'Python'],
+    categories: ['web'],
+    platform: 'web',
     links: { github: null, demo: null },
-    image: null,
+    image: {
+      src: '/projects/smartinspector.webp',
+      alt: 'SmartInspector new-inspection screen with client details form and the inspection workflow sidebar',
+    },
   },
 
   // ── More repositories (compact cards) ──────────────────────────────────────
@@ -287,7 +302,10 @@ export const projects: Project[] = [
     platform: 'web',
     compact: true,
     links: { github: 'https://github.com/will931012/miamiFragancesShopify', demo: null },
-    image: null,
+    image: {
+      src: '/projects/miami-fragrances-theme.webp',
+      alt: 'Project cover for the Miami Fragrances Storefront Theme listing its tech stack',
+    },
   },
   {
     slug: 'grace-essences-theme',
@@ -306,7 +324,10 @@ export const projects: Project[] = [
     platform: 'web',
     compact: true,
     links: { github: 'https://github.com/will931012/graceessences.shopify', demo: null },
-    image: null,
+    image: {
+      src: '/projects/grace-essences-theme.webp',
+      alt: 'Project cover for the Grace Essences Shopify Theme listing its tech stack',
+    },
   },
   {
     slug: 'price-list-normalizer',
@@ -326,7 +347,10 @@ export const projects: Project[] = [
     platform: 'code',
     compact: true,
     links: { github: 'https://github.com/will931012/normalizer-xlsx', demo: null },
-    image: null,
+    image: {
+      src: '/projects/price-list-normalizer.webp',
+      alt: 'Project cover for the Supplier Price List Normalizer listing its tech stack',
+    },
   },
 ]
 

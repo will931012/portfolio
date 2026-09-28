@@ -37,7 +37,6 @@ All copy lives in two data files, so you rarely need to touch components.
 - [x] **Email:** set to `wilianpg93@gmail.com` in `src/data/profile.ts`.
 - [x] **LinkedIn / GitHub:** set in `src/data/profile.ts`.
 - [x] **Résumé:** `public/resume.pdf` is generated from `resume/resume.html` (see below).
-- [ ] **Property Inspection App:** fill in its `stack` in `projects.ts`.
 
 ### Updating the résumé
 
@@ -82,7 +81,7 @@ Links that are still `null` show as "coming soon" instead of a broken link.
 
 Projects render in array order. Keep the number of regular (non-featured, non-compact) projects even so the two-column grid has no gaps.
 
-Screenshots of the live sites in `public/projects/` were captured at 1440×900. To refresh one, take a new screenshot at that size and overwrite the file.
+Images in `public/projects/` are 1440×900 WebP files: real screenshots for the live sites, MLB Edge Predictor, and SmartInspector, and designed cover cards for projects that can't be captured (the iOS app, the Shopify themes, the CLI tool, and the e-commerce platform). Replace a cover with a real screenshot at the same size whenever one is available.
 
 ### Adding a project or filter category
 
